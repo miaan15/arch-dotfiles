@@ -21,6 +21,7 @@ tooltip {
 }
 
 #idle_inhibitor,
+#backlight,
 #pulseaudio,
 #pulseaudio.microphone,
 #bluetooth,
@@ -39,6 +40,7 @@ tooltip {
 }
 
 #idle_inhibitor,
+#backlight,
 #pulseaudio,
 #pulseaudio.microphone,
 #bluetooth,
@@ -77,6 +79,7 @@ tooltip {
 }
 
 #idle_inhibitor:hover,
+#backlight:hover,
 #clock:hover,
 #mpris:hover,
 #cpu:hover,

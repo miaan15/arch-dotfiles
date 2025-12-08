@@ -15,6 +15,10 @@
     "custom/r_end",
 
     "custom/l_end",
+    "backlight", 
+    "custom/r_end",
+
+    "custom/l_end",
     "pulseaudio",
     "pulseaudio#microphone",
     "bluetooth",
@@ -48,33 +52,45 @@
       "deactivated": "<span color='#a6d189'></span>"
     }
   },
-
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "active": "<span color='#e8e5ed'></span>",
-      "default": "<span color='#a6d189'></span>"
-    },
-    "disable-scroll": true,
-    "rotate": 0,
-    "all-outputs": true,
-    "active-only": false,
-    "on-click": "activate",
-    "persistent-workspaces": {
-      "*": 5
-    }
+ 
+  "backlight": {
+    "format": "<span color='#a6d189'>󰃞</span> {percent}",
+ 
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "min-length": 6
   },
 
-  "mpris": {
-    "format": "{status_icon} {title:.45} | {artist:.15}",
-    "format-stop": "<span foreground='#a6d189'></span>",
-    "status-icons": {
-      "paused": "<span foreground='#a6d189'></span>",
-      "playing": "<span foreground='#a6d189'></span>"
-    },
-    "on-click": "playerctl play-pause",
-    "on-click-middle": "playerctl stop",
-    "escape": true
+  "pulseaudio": {
+    "format": "{icon} {volume}",
+    "rotate": 0,
+    "format-muted": "<span color='#a6d189'>󰝟</span> ",
+    "on-click": "pwvucontrol -t 4",
+    "scroll-step": 5.0,
+    "smooth-scrolling-threshold": 1,
+    "tooltip-format": "{desc} // {volume}%",
+    "format-icons": {
+      "headphone": "<span color='#a6d189'></span>",
+      "headset": "<span color='#a6d189'></span>",
+      "default": [
+        "<span color='#a6d189'></span>",
+        "<span color='#a6d189'></span>",
+        "<span color='#a6d189'></span>"
+      ]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "rotate": 0,
+    "format-source": "<span color='#a6d189'></span> ",
+    "format-source-muted": "<span color='#a6d189'></span> ",
+    "on-click": "pwvucontrol -t 3",
+    "tooltip-format": "{source_desc} // {source_volume}%"
+  },
+  "bluetooth": {
+    "format": "<span color='#a6d189'></span> ",
+    "format-connected": "<span olor='#a6d189'>󰂱</span> ",
+    "format-disabled": "<span color='#a6d189'>󰂲</span> "
   },
 
   "cpu": {
@@ -117,40 +133,6 @@
     "tooltip-format-disconnected": "Disconnected",
     "on-click": "kitty -e nmtui",
     "interval": 1
-  },
-
-  "pulseaudio": {
-    "format": "{icon} {volume}",
-    "rotate": 0,
-    "format-muted": "<span color='#a6d189'>󰝟</span> ",
-    "on-click": "pwvucontrol -t 4",
-    "scroll-step": 5.0,
-    "smooth-scrolling-threshold": 1,
-    "tooltip-format": "{desc} // {volume}%",
-    "format-icons": {
-      "headphone": "<span color='#a6d189'></span>",
-      "headset": "<span color='#a6d189'></span>",
-      "default": [
-        "<span color='#a6d189'></span>",
-        "<span color='#a6d189'></span>",
-        "<span color='#a6d189'></span>"
-      ]
-    }
-  },
-
-  "pulseaudio#microphone": {
-    "format": "{format_source}",
-    "rotate": 0,
-    "format-source": "<span color='#a6d189'></span> ",
-    "format-source-muted": "<span color='#a6d189'></span> ",
-    "on-click": "pwvucontrol -t 3",
-    "tooltip-format": "{source_desc} // {source_volume}%"
-  },
-
-  "bluetooth": {
-    "format": "<span color='#a6d189'></span> ",
-    "format-connected": "<span olor='#a6d189'>󰂱</span> ",
-    "format-disabled": "<span color='#a6d189'>󰂲</span> "
   },
 
   "battery": {
