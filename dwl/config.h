@@ -67,7 +67,7 @@ static const int repeat_delay = 600;
 static const int tap_to_click = 1;
 static const int tap_and_drag = 1;
 static const int drag_lock = 1;
-static const int natural_scrolling = 1;
+static const int natural_scrolling = 0;
 static const int disable_while_typing = 1;
 static const int left_handed = 0;
 static const int middle_button_emulation = 0;
@@ -135,9 +135,9 @@ static const Key keys[] = {
     { MODKEY,                    XKB_KEY_Return,     zoom,           {0} },
     { MODKEY,                    XKB_KEY_Tab,        view,           {0} },
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Q,          killclient,     {0} },
-    { MODKEY,                    XKB_KEY_g,          setlayout,      {.v = &layouts[0]} },
-    { MODKEY,                    XKB_KEY_f,          setlayout,      {.v = &layouts[1]} },
-    { MODKEY,                    XKB_KEY_m,          setlayout,      {.v = &layouts[2]} },
+    { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_G,          setlayout,      {.v = &layouts[0]} },
+    { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_F,          setlayout,      {.v = &layouts[1]} },
+    { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_M,          setlayout,      {.v = &layouts[2]} },
     { MODKEY,                    XKB_KEY_space,      setlayout,      {0} },
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_space,      togglefloating, {0} },
     { MODKEY,                    XKB_KEY_e,         togglefullscreen, {0} },
