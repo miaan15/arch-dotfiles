@@ -1,12 +1,19 @@
 # Miaan's Arch dotfiles
 
+### Requires
 - zsh
 - dwl
 - kitty
+- rofi
+- waybar
+- swaybg
 
-Theme
-- Catppuccin
-
-Font
+### Font
 - FiraCode
 - Noto Font
+- Symbol Nerd Font
+- Noto Color Emoji
+
+### Theme
+- Catppuccin
+
