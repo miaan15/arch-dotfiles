@@ -15,12 +15,10 @@
     "custom/r_end",
 
     "custom/l_end",
-    "hyprland/workspaces",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "bluetooth",
     "custom/r_end",
-
-    "custom/l_end",
-    "mpris",
-    "custom/r_end"
   ],
   "modules-right": [
     "custom/l_end",
@@ -31,12 +29,6 @@
 
     "custom/l_end",
     "network",
-    "custom/r_end",
-
-    "custom/l_end",
-    "pulseaudio",
-    "pulseaudio#microphone",
-    "bluetooth",
     "custom/r_end",
 
     "custom/l_end",

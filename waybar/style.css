@@ -21,18 +21,15 @@ tooltip {
 }
 
 #idle_inhibitor,
-#workspaces,
-#clock,
-#mpris,
+#pulseaudio,
+#pulseaudio.microphone,
+#bluetooth,
 #cpu,
 #memory,
 #temperature,
 #network,
-#bluetooth,
-#pulseaudio,
-#pulseaudio.microphone,
 #battery,
-#custom-swaync,
+#clock,
 #custom-l_end,
 #custom-r_end {
   color: @main-fg;
@@ -41,65 +38,35 @@ tooltip {
   padding: 4px 6px 4px 2px;
 }
 
-#workspaces {
-  padding: 0px 0;
-}
-#workspaces button {
-  background: transparent;
-  color: @main-fg;
-  border-radius: 8px;
-}
-#workspaces button:hover {
-  background: @hvr-bg;
-  color: @hvr-fg;
-  outline: none;
-  box-shadow: none;
-}
-#workspaces button.active {
-  background: @act-bg;
-  color: @act-fg;
-}
-#workspaces buttonfocus {
-  outline: none;
-  box-shadow: none;
-}
-
-#mpris {
-  font-size: 10;
+#idle_inhibitor,
+#pulseaudio,
+#pulseaudio.microphone,
+#bluetooth,
+#cpu,
+#memory,
+#temperature,
+#network,
+#battery,
+#clock {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
 }
 
 #custom-l_end {
-  margin-left: 3px;
+  margin-left: 2px;
   margin-right: 0;
   padding-left: 5px;
-  padding-right: 0px;
+  padding-right: 0;
   border-radius: 8px 0 0 8px;
 }
 
 #custom-r_end {
   margin-left: 0;
-  margin-right: 3px;
-  padding-left: 0px;
-  padding-right: 0px;
+  margin-right: 2px;
+  padding-left: 0;
+  padding-right: 0;
   border-radius: 0 8px 8px 0;
-}
-
-#idle_inhibitor,
-#workspaces,
-#clock,
-#mpris,
-#cpu,
-#memory,
-#temperature,
-#network,
-#bluetooth,
-#pulseaudio,
-#pulseaudio.microphone,
-#battery,
-#custom-swaync {
-  margin-left: 0;
-  margin-right: 0;
-  border-radius: 0;
 }
 
 #custom-l_end + * {
