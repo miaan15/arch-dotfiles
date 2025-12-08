@@ -1,3 +1,5 @@
+#include <X11/XF86keysym.h>
+
 /* Taken from https://github.com/djpohly/dwl/issues/466 */
 #define COLOR(hex)    { ((hex >> 24) & 0xFF) / 255.0f, \
                         ((hex >> 16) & 0xFF) / 255.0f, \
@@ -121,6 +123,13 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 static const char *termcmd[] = { "kitty", NULL };
 static const char *menucmd[] = { "rofi", "-show", "drun", NULL };
 
+static const char *upvol[]   = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL };
+static const char *downvol[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL };
+static const char *mutevol[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
+
+static const char *upbl[]    = { "brightnessctl", "set", "5%+", NULL };
+static const char *downbl[]  = { "brightnessctl", "set", "5%-", NULL };
+
 static const Key keys[] = {
     /* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
     /* modifier                  key                 function        argument */
@@ -157,6 +166,11 @@ static const Key keys[] = {
     TAGKEYS(          XKB_KEY_8, XKB_KEY_asterisk,                   7),
     TAGKEYS(          XKB_KEY_9, XKB_KEY_parenleft,                  8),
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Escape,     quit,           {0} },
+    { 0                        , XF86XK_AudioRaiseVolume,  spawn,    {.v = upvol} },
+    { 0                        , XF86XK_AudioLowerVolume,  spawn,    {.v = downvol} },
+    { 0                        , XF86XK_AudioMute,         spawn,    {.v = mutevol} },
+    { 0                        , XF86XK_MonBrightnessUp,   spawn,    {.v = upbl} },
+    { 0                        , XF86XK_MonBrightnessDown, spawn,    {.v = downbl} },
 
     /* Ctrl-Alt-Backspace and Ctrl-Alt-Fx used to be handled by X server */
     { WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_Terminate_Server, quit, {0} },
