@@ -2,6 +2,7 @@
 
 ### Requires
 - zsh
+- oh-my-zsh
 - dwl
 - kitty
 - rofi
