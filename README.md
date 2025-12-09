@@ -9,6 +9,10 @@
 - waybar
 - swaybg
 - ibus
+- swayidle 
+- swaylock
+- wlopm
+- tmux
 
 ### Font
 - FiraCode

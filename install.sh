@@ -46,7 +46,7 @@ clean() {
         fi
     done
     for script in $SRC_SCRIPTS; do
-        dest="$BIN_DIR/$script"
+        dest="$BIN_DIR/scripts/$script"
         if [ -L "$dest" ]; then
             rm "$dest"
             echo "Removed: $script"
