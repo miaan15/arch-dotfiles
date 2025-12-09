@@ -15,14 +15,10 @@
     "custom/r_end",
 
     "custom/l_end",
-    "backlight", 
-    "custom/r_end",
-
-    "custom/l_end",
     "pulseaudio",
     "pulseaudio#microphone",
     "bluetooth",
-    "custom/r_end",
+    "custom/r_end"
   ],
   "modules-right": [
     "custom/l_end",
@@ -80,7 +76,7 @@
     }
   },
   "pulseaudio#microphone": {
-    "format": "{format_source}",
+    "format": "| {format_source}",
     "rotate": 0,
     "format-source": "<span color='#a6d189'></span> ",
     "format-source-muted": "<span color='#a6d189'></span> ",
@@ -88,9 +84,9 @@
     "tooltip-format": "{source_desc} // {source_volume}%"
   },
   "bluetooth": {
-    "format": "<span color='#a6d189'></span> ",
-    "format-connected": "<span olor='#a6d189'>󰂱</span> ",
-    "format-disabled": "<span color='#a6d189'>󰂲</span> "
+    "format": "| <span color='#a6d189'>󰂲</span> ",
+    "format-connected": "| <span olor='#a6d189'>󰂱</span> ",
+    "format-disabled": "| <span color='#a6d189'>󰂲</span> "
   },
 
   "cpu": {
@@ -98,26 +94,24 @@
     "format": "<span color='#a6d189'>󰍛</span> {usage}%",
     "rotate": 0
   },
-
   "memory": {
     "states": {
       "c": 90
     },
     "interval": 3,
-    "format": "<span color='#a6d189'></span> {percentage}%",
+    "format": "| <span color='#a6d189'></span> {percentage}%",
     "rotate": 0,
-    "format-alt": "<span color='#a6d189'></span> {used:0.1f}GB",
+    "format-alt": "| <span color='#a6d189'></span> {used:0.1f}GB",
     "tooltip": true,
     "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB : {percentage}%"
   },
-
   "temperature": {
     "states": {
       "c": 85
     },
     "interval": 3,
     "critical-threshold": 85,
-    "format": "<span color='#a6d189'></span> {temperatureC}°C",
+    "format": "| <span color='#a6d189'></span> {temperatureC}°C",
     "tooltip": true,
     "tooltip-format": "might be hot, might be not"
   },
@@ -131,7 +125,6 @@
     "format-linked": "<span color='#a6d189'>󰈀</span> {ifname} (No IP)",
     "format-disconnected": "<span color='#a6d189'>󰖪</span> :(",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "kitty -e nmtui",
     "interval": 1
   },
 
