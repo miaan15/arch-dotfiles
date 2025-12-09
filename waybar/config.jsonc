@@ -10,9 +10,9 @@
   "margin-right": 0,
 
   "modules-left": [
-    "custom/l_end",
-    "idle_inhibitor",
-    "custom/r_end",
+    // "custom/l_end",
+    // "idle_inhibitor",
+    // "custom/r_end",
 
     "custom/l_end",
     "pulseaudio",
