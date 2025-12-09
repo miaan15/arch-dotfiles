@@ -6,6 +6,10 @@ export ZSH_PLUGINS="/usr/share/zsh/plugins"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+export GTK_IM_MODULE="ibus"
+export QT_IM_MODULE="ibus"
+export XMODIFIERS=@im="ibus"
+
 alias vim=$EDITOR
 alias vi=$EDITOR
 

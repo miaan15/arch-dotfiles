@@ -8,6 +8,7 @@
 - rofi
 - waybar
 - swaybg
+- ibus
 
 ### Font
 - FiraCode
