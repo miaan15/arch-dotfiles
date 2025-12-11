@@ -3,7 +3,7 @@
 WALLPAPER="$HOME/dotfiles/images/wallpaper.jpg"
 
 waybar &
-swaybg -i ~/dotfiles/images/wallpaper.jpg &
+swaybg -i $WALLPAPER &
 
 ibus-daemon -rxRd
 
