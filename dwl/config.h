@@ -130,6 +130,8 @@ static const char *mutevol[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "t
 static const char *upbl[]    = { "brightnessctl", "set", "5%+", NULL };
 static const char *downbl[]  = { "brightnessctl", "set", "5%-", NULL };
 
+static const char *powermenu[] = { "/bin/sh", "-c", "~/dotfiles/scripts/power.sh", NULL };
+
 static const Key keys[] = {
     /* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
     /* modifier                  key                 function        argument */
@@ -169,6 +171,8 @@ static const Key keys[] = {
     { MODKEY,                    XKB_KEY_period,     focusmon,       {.i = WLR_DIRECTION_RIGHT} },
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_less,       tagmon,         {.i = WLR_DIRECTION_LEFT} },
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_greater,    tagmon,         {.i = WLR_DIRECTION_RIGHT} },
+
+    { MODKEY                   , XKB_KEY_BackSpace,  spawn,          {.v = powermenu} },
 
     { 0                        , XF86XK_AudioRaiseVolume,  spawn,    {.v = upvol} },
     { 0                        , XF86XK_AudioLowerVolume,  spawn,    {.v = downvol} },
