@@ -10,6 +10,8 @@ export GTK_IM_MODULE="ibus"
 export QT_IM_MODULE="ibus"
 export XMODIFIERS=@im="ibus"
 
+export GTK_THEME=Adwaita:dark
+
 alias vim=$EDITOR
 alias vi=$EDITOR
 
